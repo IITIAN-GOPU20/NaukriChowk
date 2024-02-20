@@ -147,7 +147,7 @@
 
         <!-- svgContainer -->
         <div class="wrapper row">
-            <div class="cotainer col-9 formwrapper">
+            <div class="cotainer col-lg-9 formwrapper">
                 <!-- name -->
                 <div class="inputGroup">
                     <label for="FullName">Full Name</label>
@@ -221,15 +221,14 @@
                 </div>
 
                 <!-- signup btn -->
-                <div class="inputGroup inputGroup3  col-9" id="btnEvent">
+                <div class="inputGroup inputGroup3  col-12" id="btnEvent">
                     <button id="login" type="submit" [disabled]="registerForm.invalid">Sign up</button>
                 </div>
             </div>
 
             <!-- google login button -->
-            <div class="container col-3"
-                style=" justify-content: center; display: flex; flex-direction: column;  margin-bottom: 150px; border-left: 1px solid #217093; padding-left: 20px;">
-                <label for="FullName" style="align-self: center;">Continue with</label>
+            <div class="container col-lg-3 google-login-btn">
+                <label for="FullName" style="align-self: center; text-align: center;">Continue with</label>
                 <button class="btn btn-outline-primary google-login-button">
                     <img src="../../../assets/google-logo.png" alt="Google Logo" class="google-icon mr-2">
                     Google
