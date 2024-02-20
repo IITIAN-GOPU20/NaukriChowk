@@ -1,4 +1,5 @@
 <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+    
     <!-- svgContainer -->
     <div class="svgContainer">
         <div>
@@ -138,20 +139,42 @@
             </svg>
         </div>
     </div>
-    <!-- svgContainer -->
+
+    <!-- email -->
     <div class="inputGroup inputGroup1">
-        <label for="email1">Email/Mobile No</label>
-        <input type="text" id="email" name="email" ngModel class="email" maxlength="256" required />
-        <span class="indicator"></span>
+        <label for="email1">Email</label>
+        <input type="text" id="email" name="email" ngModel class="email" maxlength="256" required #email="ngModel"
+            authEmailValidator />
+        <ng-container *ngIf="email.touched && email.errors" class="">
+            <ng-container *ngFor="let error of email.errors | keyvalue">
+                <span *ngIf="error.key === 'required';">
+                    Email is required
+                </span>
+                <span *ngIf="error.key === 'invalidEmail'">
+                    Please enter a valid email address
+                </span>
+            </ng-container>
+        </ng-container>
     </div>
+
+    <!-- password -->
     <div class="inputGroup inputGroup2">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" ngModel class="password" required />
+        <input type="password" id="password" name="password" ngModel class="password" required #password="ngModel"
+            minlength="6" />
+        <span *ngIf="(password.touched) && (password.errors?.minlength || password.errors?.required )" class="">
+            Min 6 characters required
+        </span>
     </div>
+
+    <!-- forgotPassword -->
     <div class="inputGroup forgotpassword inputGroup4">
         <a [routerLink]="['/forgotpassword']" class="forgotPassword">Forgot Password?</a>
     </div>
+
+    <!-- login button -->
     <div class="inputGroup inputGroup3" id="btnEvent">
         <button id="login" type="submit" [disabled]="loginForm.invalid" [routerLink]="['/register']">Log in</button>
     </div>
+
 </form>

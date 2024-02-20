@@ -148,7 +148,7 @@
         <!-- svgContainer -->
         <div class="wrapper row">
             <div class="cotainer col-9 formwrapper">
-
+                <!-- name -->
                 <div class="inputGroup">
                     <label for="FullName">Full Name</label>
                     <input type="text" id="fullname" name="fullname" ngModel class="email" required #name="ngModel" />
@@ -156,51 +156,51 @@
                         Name is required
                     </span>
                 </div>
-
+                <!-- email -->
                 <div class="inputGroup inputGroup1">
                     <label for="email1">Email</label>
                     <input type="text" id="email" name="email" ngModel class="email" maxlength="256" required
-                        #email="ngModel"  authEmailValidator/>
+                        #email="ngModel" authEmailValidator />
                     <ng-container *ngIf="email.touched && email.errors" class="">
                         <ng-container *ngFor="let error of email.errors | keyvalue">
                             <span *ngIf="error.key === 'required';">
                                 Email is required
                             </span>
-                                <span *ngIf="error.key === 'invalidEmail'">
-                                    Please enter a valid email address
-                                </span>
+                            <span *ngIf="error.key === 'invalidEmail'">
+                                Please enter a valid email address
+                            </span>
                         </ng-container>
                     </ng-container>
                 </div>
-
+                <!-- password -->
                 <div class="inputGroup inputGroup2">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" ngModel class="password" required
-                        #password="ngModel" minlength="6"  />
-                    <span *ngIf="(password.touched) && (password.errors?.minlength || password.errors?.required )" class="">
+                        #password="ngModel" minlength="6" />
+                    <span *ngIf="(password.touched) && (password.errors?.minlength || password.errors?.required )"
+                        class="">
                         Min 6 characters required
                     </span>
                 </div>
+                <!-- confirmpassword -->
                 <div class="inputGroup inputGroup2">
                     <label for="confirmpassword">Confirm Password</label>
                     <input type="password" id="confirmpassword" name="confirmpassword" ngModel class="confirmpassword"
-                        required #confirmpassword="ngModel" appConfirmPasswordValidator [passwordValue] ="password?.value || ''"/>
+                        required #confirmpassword="ngModel" appConfirmPasswordValidator
+                        [passwordValue]="password?.value || ''" />
                     <!-- <span *ngIf="(confirmpassword.touched && password.touched ) && confirmpassword.errors?.required"
                         class="">
                         Confirm Password is required
                     </span> -->
                     <ng-container *ngIf="confirmpassword.touched && confirmpassword.errors" class="">
                         <ng-container *ngFor="let error of confirmpassword.errors | keyvalue">
-                                <span *ngIf="error.key === 'passwordMismatch'">
-                                    Confirm password didn't match
-                                </span>
-                                <!-- <span *ngIf="error.key === 'passwordRequired'">
-                                    Password is required
-                                </span> -->
+                            <span *ngIf="error.key === 'passwordMismatch'">
+                                Confirm password didn't match
+                            </span>
                         </ng-container>
                     </ng-container>
                 </div>
-
+                <!-- mobile no -->
                 <div class="inputGroup">
                     <label for="Mobile No">Mobile Number</label>
                     <input type="text" id="mobile" class="email" name="mobileno" ngModel maxlength="10" required
@@ -211,6 +211,7 @@
                     </span>
                 </div>
 
+                <!-- gender -->
                 <div class="inputGroup inputGroupRadio">
                     <label for="gender">I'm a</label>
                     <input type="radio" id="male" name="gender" value="male" class="gender-radio" ngModel required>
@@ -218,11 +219,14 @@
                     <input type="radio" id="female" name="gender" value="female" ngModel required>
                     <label class="inputGroupRadioLabel" for="female">Female</label>
                 </div>
+
+                <!-- signup btn -->
                 <div class="inputGroup inputGroup3  col-9" id="btnEvent">
                     <button id="login" type="submit" [disabled]="registerForm.invalid">Sign up</button>
                 </div>
             </div>
 
+            <!-- google login button -->
             <div class="container col-3"
                 style=" justify-content: center; display: flex; flex-direction: column;  margin-bottom: 150px; border-left: 1px solid #217093; padding-left: 20px;">
                 <label for="FullName" style="align-self: center;">Continue with</label>

@@ -8,12 +8,9 @@ import { AbstractControl, FormGroupDirective, NG_VALIDATORS, ValidationErrors, V
 export class ConfirmPasswordValidatorDirective implements Validator {
   @Input() passwordValue: string = "";
 
-  constructor(private formGroupDirective: FormGroupDirective) {}
+  constructor(private formGroupDirective: FormGroupDirective) { }
 
   validate(control: AbstractControl): ValidationErrors | null {
-    // console.log("confirmControlName", this.passwordValue, control.value)
-
-
     if (this.passwordValue !== control.value) {
       return { 'passwordMismatch': true };
     }
