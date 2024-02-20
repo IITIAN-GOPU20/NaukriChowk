@@ -1,6 +1,6 @@
-import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+import { TweenMax, Power2, TimelineLite } from "gsap/TweenMax";
 
- var password = document.querySelector('#password'), mySVG = document.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');
+var password = document.querySelector('#password'), mySVG = document.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');
 var caretPos, curEmailIndex, screenCenter, svgCoords, eyeMaxHorizD = 20, eyeMaxVertD = 10, noseMaxHorizD = 23, noseMaxVertD = 10, dFromC, eyeDistH, eyeLDistV, eyeRDistV, eyeDistR, mouthStatus = "small";
 
 function getCoord(e) {
@@ -141,12 +141,50 @@ function onPasswordFocus(e) {
 	coverEyes();
 }
 
+function onSvgFocus(e) {
+	const inputElements = document.querySelectorAll('input');
+console.log(inputElements)
+	let isAnyInputFocused = false;
+	inputElements.forEach((inputElement) => {
+		if (document.activeElement === inputElement) {
+			isAnyInputFocused = true;
+			return;
+		}
+	});
+
+	if (!isAnyInputFocused) {
+		saluteRightArm()
+	} 
+
+}
+
+function onSvgBlur(e) {
+	const inputElements = document.querySelectorAll('input');
+
+	let isAnyInputFocused = false;
+	inputElements.forEach((inputElement) => {
+		if (document.activeElement === inputElement) {
+			isAnyInputFocused = true;
+			return;
+		}
+	});
+
+	if (!isAnyInputFocused) {
+		handDown();
+	} 
+
+}
+
+function saluteRightArm(e) {
+	TweenMax.to(armR, .45, { x: -93, y: -25, rotation: 0, ease: Quad.ease, delay: .1 });
+}
+
 function onPasswordBlur(e) {
 	uncoverEyes();
 }
 
 function coverEyes() {
-	TweenMax.to(armL, .45, { x: -93, y: 2, rotation: 0, ease: Quad.easeOut });
+	TweenMax.to(armL, .45, { x: -93, y: 2, rotation: 0, ease: Quad.easeOut, delay: .1 });
 	TweenMax.to(armR, .45, { x: -93, y: 2, rotation: 0, ease: Quad.easeOut, delay: .1 });
 }
 
@@ -155,6 +193,11 @@ function uncoverEyes() {
 	TweenMax.to(armL, 1.35, { rotation: 105, ease: Quad.easeOut, delay: .1 });
 	TweenMax.to(armR, 1.35, { y: 220, ease: Quad.easeOut });
 	TweenMax.to(armR, 1.35, { rotation: -105, ease: Quad.easeOut, delay: .1 });
+}
+
+function handDown(){
+	TweenMax.to(armR, 1.35, { y: 220, ease: Quad.ease });
+	TweenMax.to(armR, 1.35, { rotation: -105, ease: Quad.ease, delay: .1 });
 }
 
 function resetFace() {
@@ -203,16 +246,23 @@ function initialize() {
 	var emails = document.querySelectorAll('.email')
 	password = document.querySelector('#password'), mySVG = document.querySelector('.svgContainer'), armL = document.querySelector('.armL'), armR = document.querySelector('.armR'), eyeL = document.querySelector('.eyeL'), eyeR = document.querySelector('.eyeR'), nose = document.querySelector('.nose'), mouth = document.querySelector('.mouth'), mouthBG = document.querySelector('.mouthBG'), mouthSmallBG = document.querySelector('.mouthSmallBG'), mouthMediumBG = document.querySelector('.mouthMediumBG'), mouthLargeBG = document.querySelector('.mouthLargeBG'), mouthMaskPath = document.querySelector('#mouthMaskPath'), mouthOutline = document.querySelector('.mouthOutline'), tooth = document.querySelector('.tooth'), tongue = document.querySelector('.tongue'), chin = document.querySelector('.chin'), face = document.querySelector('.face'), eyebrow = document.querySelector('.eyebrow'), outerEarL = document.querySelector('.earL .outerEar'), outerEarR = document.querySelector('.earR .outerEar'), earHairL = document.querySelector('.earL .earHair'), earHairR = document.querySelector('.earR .earHair'), hair = document.querySelector('.hair');
 	caretPos, curEmailIndex, screenCenter, svgCoords, eyeMaxHorizD = 20, eyeMaxVertD = 10, noseMaxHorizD = 23, noseMaxVertD = 10, dFromC, eyeDistH, eyeLDistV, eyeRDistV, eyeDistR, mouthStatus = "small";
-	emails.forEach((email)=>{
+	var confirmPassowrd = document.querySelector('#confirmpassword')
+	var signupButton = document.querySelector('#btnEvent')
+	console.log(mySVG)
+	emails.forEach((email) => {
 		email.addEventListener('focus', onEmailFocus);
 		email.addEventListener('blur', onEmailBlur);
 		email.addEventListener('input', onEmailInput);
 	})
 
-	password.addEventListener('focus', onPasswordFocus);
-	password.addEventListener('blur', onPasswordBlur);
-	TweenMax.set(armL, { x: -93, y: 220, rotation: 105, transformOrigin: "top left" });
-	TweenMax.set(armR, { x: -93, y: 220, rotation: -105, transformOrigin: "top right" });
+	password?.addEventListener('focus', onPasswordFocus);
+	password?.addEventListener('blur', onPasswordBlur);
+	signupButton?.addEventListener('mouseenter', onSvgFocus);
+	signupButton?.addEventListener('mouseleave', onSvgBlur);
+	confirmPassowrd?.addEventListener('focus', onPasswordFocus);
+	confirmPassowrd?.addEventListener('blur', onPasswordBlur);
+	TweenMax?.set(armL, { x: -93, y: 220, rotation: 105, transformOrigin: "top left" });
+	TweenMax?.set(armR, { x: -93, y: 220, rotation: -105, transformOrigin: "top right" });
 }
 
 window.initialize = initialize;

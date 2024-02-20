@@ -1,9 +1,11 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import '../svg-animation.js';
+import { FormGroupDirective } from '@angular/forms';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  providers: [FormGroupDirective]
 })
 export class RegisterComponent implements OnInit, AfterViewInit {
 
@@ -16,7 +18,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     (window as any).initialize();
   }
 
-  login(form: any){
+  signUp(form: any){
     console.log(form)
 
   }

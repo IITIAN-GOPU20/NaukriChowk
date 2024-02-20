@@ -6,6 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from '../shared/shared.module';
+import { EmailValidatorDirective } from './directive/email-validator.directive';
+import { ConfirmPasswordValidatorDirective } from './directive/confirm-password-validator.directive';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 
 
@@ -14,6 +17,9 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     LoginComponent,
     RegisterComponent,
+    EmailValidatorDirective,
+    ConfirmPasswordValidatorDirective,
+    ForgotPasswordComponent,
   ],
   imports: [
     CommonModule,
