@@ -1,30 +1,31 @@
-
-
-<header class="wrapper bimage "[ngStyle]="navbg">
+<header class="wrapper bimage">
 
     <input type="checkbox" id="show_search">
     <h1 class="logo">Naukri Chowk</h1>
+    <!-- header name -->
+    <!-- <h1 class="logo">xyzxyzxyz</h1> -->
     <h1 class="logo_2">NC</h1>
+    <!-- search -->
+    <div class="search_class">
 
-
-    <div class="search_class" >
-
-        <form action="" class="search_box" method="get"  >
+        <form class="search_box">
 
             <input class="search_bar" type="text" placeholder="Search for Jobs/Naukri...">
 
-          <button class="go_icon"   type="submit" > <img class="search-icon" src="assets/search_icon.svg"></button>
+            <button class="go_icon" [disabled]="true"> <img class="search-icon" src="assets/search_icon.svg"></button>
 
         </form>
 
-    </div>  <label for="show_search" class="search_icon"><i class="fas fa-search"></i></label>
+    </div> <label for="show_search" class="search_icon"><i class="fas fa-search"></i></label>
 
+    <!-- profile dowpdown -->
+    <!-- <app-profile-dropdown [isAuthenticated]="true"></app-profile-dropdown> -->
 
-    <div class="login_btn" >
+    <div class="login_btn">
         <a class="cta" [routerLink]="['/login']"><button class="btn_sign btn_2">Login</button></a>
     </div>
-    <div class="login_btn" >
-        <a class="cta" [routerLink]="['/register']" ><button class="btn_sign">Register</button></a>
+    <div class="login_btn">
+        <a class="cta" [routerLink]="['/register']"><button class="btn_sign">Register</button></a>
     </div>
 
 
@@ -36,98 +37,94 @@
 <!-- ========================================================================= -->
 
 <div class="main_dropdown_container">
-   
-  
+
+
     <!-- <div class="dropdown_logo_bar_li" (click)="toggle_bar()" id="toggle_bar" ><i class="fas fa-bars dropdown_logo_bar bar" ></i></div> -->
 
     <nav class="navbar_container toggle">
-            <div class="main_navbar">
-               
-                <ul class="main_navbar_ul">
-                
-                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">HOME</a></li>
-                    <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">About</a></li>
-                    <li class="navbar_level_1_li ">
-                        <a href="" class="navbar_level_1_link">Full Time Jobs</a>
-                    
-                            <ul class="dropdown_level_1">
+        <div class="main_navbar">
 
-                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
-                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
-                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
-                                    <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+            <ul class="main_navbar_ul">
+
+                <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">HOME</a></li>
+                <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">About</a></li>
+                <li class="navbar_level_1_li ">
+                    <a href="" class="navbar_level_1_link">Full Time Jobs</a>
+
+                    <ul class="dropdown_level_1">
+
+                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
 
 
 
+                    </ul>
+
+
+                </li>
+                <li class="navbar_level_1_li">
+                    Internship
+
+
+                    <div class="mega_dropdown_container">
+
+                        <div class="row row1">
+                            <h2 class="mega_header">Development</h2>
+                            <ul class="mega_ul" id="first_ul">
+
+                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
                             </ul>
 
-                    
-                    </li>
-                    <li class="navbar_level_1_li">
-                        Internship
+                        </div>
 
+                        <div class="row row2">
+                            <h2 class="mega_header">Security</h2>
+                            <ul class="mega_ul li_border">
 
-                                <div class="mega_dropdown_container">
+                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
+                            </ul>
 
-                                        <div class="row row1">
-                                            <h2 class="mega_header">Development</h2>
-                                            <ul class="mega_ul" id="first_ul">
+                        </div>
 
-                                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
-                                            </ul>
+                        <div class="row row3">
+                            <h2 class="mega_header">Cloud</h2>
+                            <ul class="mega_ul li_border">
 
-                                        </div>
-                                      
-                                        <div class="row row2">
-                                            <h2 class="mega_header">Security</h2>
-                                            <ul class="mega_ul li_border">
-                                               
-                                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
-                                            </ul>
-                                            
-                                        </div>
+                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
+                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
+                            </ul>
 
-                                        <div class="row row3">
-                                            <h2 class="mega_header">Cloud</h2>
-                                            <ul class="mega_ul li_border">
-
-                                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
-                                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
-                                            </ul>
-                                            
-                                        </div>
+                        </div>
 
 
 
 
 
 
-                                </div>
-
-
-                    
-                    </li>
-
-
-                </ul>
+                    </div>
 
 
 
-            </div>
+                </li>
+
+
+            </ul>
+
+
+
+        </div>
     </nav>
 </div>
-
-
-
-

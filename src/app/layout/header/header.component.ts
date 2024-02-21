@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import './nav.js';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

@@ -1,0 +1,64 @@
+<!-- <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown" dropdown *ngIf="!isAuthenticated">
+      <a href="#" class="dropdown-toggle" dropdownToggle>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <span class="caret"></span>
+      </a>
+  
+      <ul class="dropdown-menu" *dropdownMenu>
+        <li><a [routerLink]="['/auth']">Sign Up</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a [routerLink]="['/auth', 'login']">Login</a></li>
+      </ul>
+    </li>
+  
+    <li class="dropdown" dropdown *ngIf="isAuthenticated">
+      <a href="#" class="dropdown-toggle" dropdownToggle>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu" *dropdownMenu>
+        <li><a routerLink="/user">My Profile</a></li>
+        <li><a routerLink="/user/orders">My Orders</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a routerLink="/user/addresses">Saved Addresses</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Edit Profile</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </li>
+  
+    <li class="cart" [routerLink]="['checkout','cart']">
+      <a>
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i> Bag
+        <span class="badge badge-danger">{{totalCartItems}}</span></a>
+    </li>
+  </ul> -->
+
+
+  <div class="action">
+    <div class="profile" (click)="toggleMenu()">
+      <img src="assets/avatar.jpg" />
+    </div>
+    <div class="menu" [class.active]="menuActive">
+    <h3>Hello User</h3>
+      <ul>
+        <li>
+          <img src="assets/user-circle.svg" /><a >My profile</a>
+        </li>
+        <li>
+          <img src="assets/edit.svg" /><a >Edit profile</a>
+        </li>
+        <li>
+          <img src="assets/inbox.svg" /><a >Inbox</a>
+        </li>
+        <li>
+          <img src="assets/cog.svg" /><a >Setting</a>
+        </li>
+        <li><img src="assets/question.svg" /><a >Help</a></li>
+        <li>
+          <img src="assets/arrow-left.svg" /><a >Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
