@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { EmailValidatorDirective } from './directive/email-validator.directive';
 import { ConfirmPasswordValidatorDirective } from './directive/confirm-password-validator.directive';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { LayoutModule } from '../layout/layout.module';
 
 
 
@@ -24,7 +25,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
   imports: [
     CommonModule,
     AuthRoutingModule,
-    SharedModule
+    SharedModule,
+    LayoutModule
   ]
 })
 export class AuthModule { }

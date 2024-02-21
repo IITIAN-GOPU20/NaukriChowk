@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { AuthRoutingModule } from '../auth/auth-routing.module';
 import { ProfileDropdownComponent } from './header/profile-dropdown/profile-dropdown.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    ProfileDropdownComponent
+    ProfileDropdownComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { ProfileDropdownComponent } from './header/profile-dropdown/profile-drop
 
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent
   ],
 })
 export class LayoutModule { }

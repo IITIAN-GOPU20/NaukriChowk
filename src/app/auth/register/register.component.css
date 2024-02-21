@@ -11,6 +11,7 @@
   display: block;
   color: #217093;
   font-weight: 700;
+  font-size: 2rem;
 }
 
 form .svgContainer .mySVG {
@@ -32,8 +33,8 @@ form .svgContainer div {
 
 form .svgContainer {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 1em;
   border-radius: 50%;
   background: none;
@@ -62,14 +63,15 @@ form label {
   /* margin: 0 0 12px; */
   margin-right: 15px;
   display: block;
-  font-size: 1.25em;
+  font-size: 1em;
   color: #217093;
   font-weight: 700;
 
 }
 
 form {
-  width: 70%;
+  margin-right: 5%;
+  margin-left: 5%;
   background-color: #fafffe;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -129,7 +131,7 @@ form input[type='password'] {
   box-sizing: border-box;
   width: 90%;
   height: 40px;
-  font-size: 1.55em;
+  font-size: 1.05em;
   color: #353538;
   font-weight: 600;
 
@@ -154,7 +156,7 @@ form input[type='password']:focus {
 } */
 form a {
   text-decoration: none;
-  font-size: 1.05em;
+  font-size: .95em;
   color: #4eb8dd;
   font-weight: 800;
 }
@@ -177,7 +179,7 @@ form .wrapper .formwrapper button:disabled {
 .inputGroup span {
   padding: 0 1em 0;
   color: rgba(244, 53, 15, 0.767);
-  font-size: 1.1em;
+  font-size: .91em;
   font-weight: 600;
 
 }
@@ -194,7 +196,7 @@ form .wrapper .formwrapper button {
   box-shadow: none;
   width: 100%;
   height: 65px;
-  font-size: 1.55em;
+  font-size: 1.35em;
   color: #fafffe;
   font-weight: 600;
   cursor: pointer;
@@ -272,7 +274,7 @@ form .inputGroup1 .helper {
   justify-content: center;
   padding: 8px;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
 
   cursor: pointer;
@@ -289,6 +291,12 @@ form .inputGroup1 .helper {
   padding-left: 20px;
 }
 
+.sidebar-container {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media only screen and (max-width: 992px) {
   .google-login-btn {
@@ -299,7 +307,7 @@ form .inputGroup1 .helper {
     padding-top: 20px;
   }
 
-
+  
 
 
 }
