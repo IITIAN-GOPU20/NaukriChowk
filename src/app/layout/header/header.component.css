@@ -70,18 +70,26 @@ body {
     cursor: pointer;
     transition: all 0.3s ease 0s;
     margin: 0px 7px;
-    color: #e5e5e5;
-    font-weight: 300;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
     align-items: flex-end;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid;
     -webkit-transition: border-color .2s ease-out;
     transition: border-color .2s ease-out;
+    animation-name: header-cta-animation !important;
+    animation-duration: 2.5s !important;
+    animation-iteration-count: infinite !important;
+    text-decoration: none;
 }
 
+
 .btn_sign:hover {
-    border: 3px solid #4eb8dd;
+    border: 3px solid;
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    font-weight: 700;
+    animation-name: unset !important;
+    margin-top: -5px;
 }
 
 
@@ -194,7 +202,7 @@ body {
 
 
 .navbar_container {
-    background: rgb(255, 255, 255);
+    background: #217093;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: all 0.5s ease;
@@ -221,7 +229,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     transition: all 0.3s ease;
-    background-color: #ffffff;
+    background-color: #217093;
     border-bottom: 1px solid #21709300;
 
 
@@ -261,7 +269,9 @@ body {
 .navbar_level_1_link {
     display: block;
     height: 100%;
-
+    color: white;
+    font-weight: 550;
+    font-size: 1.15rem;
 }
 
 
@@ -651,3 +661,15 @@ body {
 
 
 }
+
+
+  @keyframes header-cta-animation {
+    0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    
+  }
+  
