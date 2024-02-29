@@ -4,7 +4,7 @@ declare var $: any;
 @Component({
   selector: 'app-brands',
   templateUrl: './brands.component.html',
-  styleUrls: ['./brands.component.css', '../home.module.css', '../../shared/styles/aos.css']
+  styleUrls: ['./brands.component.css', '../home.module.css']
 })
 export class BrandsComponent implements OnInit, AfterViewInit {
 
