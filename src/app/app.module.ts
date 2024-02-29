@@ -7,18 +7,21 @@ import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
     SharedModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
