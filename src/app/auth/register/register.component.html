@@ -8,7 +8,7 @@
             <div class="container-fluid register-container">
                 <h1>Welcome To Naukri Chowk</h1>
 
-                <section class="col-12">
+                <section class="col-12 mb-5">
                     <form #registerForm="ngForm" (ngSubmit)="signUp(registerForm)">
                         <!-- svgContainer -->
 
@@ -160,7 +160,7 @@
 
                         <!-- svgContainer -->
                         <div class="wrapper row">
-                            <div class="cotainer col-lg-9 formwrapper">
+                            <div class="cotainer col-xl-8 formwrapper">
                                 <!-- name -->
                                 <div class="inputGroup">
                                     <label for="FullName">Full Name</label>
@@ -242,9 +242,9 @@
                                     <button id="login" type="submit" [disabled]="registerForm.invalid">Sign up</button>
                                 </div>
                             </div>
-
+                            <div class="col-xl-1"></div>
                             <!-- google login button -->
-                            <div class="container col-lg-3 google-login-btn">
+                            <div class="container col-xl-3 google-login-btn">
                                 <label for="FullName" style="align-self: center; text-align: center;">Continue
                                     with</label>
                                 <button class="btn btn-outline-primary google-login-button">

@@ -2,16 +2,14 @@
 .card{
   text-align: center;
   font-family: "Bitter", serif;
-  background-color: #217093;
+  background-color: transparent;
   font-weight: bold;
   font-size: 300px;
   font-style: normal;
-  color: #f7f4f4;
-  border-radius: 100px;
+  border: 0;
   transition: transform 0.3s ease-in-out;
-  padding: 10px;
   width: 100%;
-  
+
 }
 .card:hover {
   transform: scale(1.05);
@@ -36,7 +34,18 @@
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
-  animation: scrollAnimation 5s linear infinite;
+ 
+}
+.pb {
+  color: black;
+}
+.pb-p-container{
+  color: black;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.logo::-webkit-scrollbar {
+  display: none; 
 }
 @keyframes scrollAnimation {
   0% {
@@ -47,8 +56,11 @@
   }
 }
 
+
 .stats-container {
   overflow-x: hidden; 
+  margin-top: 50px;
+  position: relative;
 }
 
 .stats-grid {
@@ -58,18 +70,21 @@
   overflow-x: auto; 
   white-space: nowrap;
   animation: scrollAnimation2 5s linear infinite;
+  margin-top: 10px;
+}
+.stats-grid::-webkit-scrollbar {
+  display: none; 
 }
 
 .stat {
   flex: 0 0 auto;
   text-align: center;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: transparent;
   border-radius: 8px;
-  color: #217093;
+  
   font-weight: 600;
   font-size: large;
-  font-family: "Bitter", serif;
 }
 
 .divider {
@@ -79,30 +94,30 @@
 }
 
 @keyframes scrollAnimation2 {
-  0% {
-      transform: translateX(0);
-  }
+
   100% {
-      transform: translateX(calc(100% - 20px)); /* Adjust based on the number of stats and gap */
+      transform: translateX(calc(100% )); /* Adjust based on the number of stats and gap */
   }
 }
 
 .content{
-  width: 600px;
-  height: 300px;
-  background-color: #217093;
-  color: #f7f4f4;
+  
   display: flex;
   justify-content: space-evenly;
+  margin-top: 100px;
 }
 
 .gradient-box {
-  background: linear-gradient(45deg, #3498db, #2980b9, #2ecc71, #27ae60);
+  background: linear-gradient(45deg, #3498db, #53abe6, #49e389, #83f5b2);
   background-size: 400% 400%;
   animation: gradientAnimation 15s infinite;
   height: 100%;
   width: 100%;
-  padding: 10px;
+  border-top-right-radius: 18px; /* Adjust the value as needed */
+  border-bottom-right-radius: 18px; 
+  z-index: 9999;
+  position: relative;
+  
 }
 
 @keyframes gradientAnimation {
