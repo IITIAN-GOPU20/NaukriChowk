@@ -1,0 +1,138 @@
+/* Filter section styles */
+.filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .title-container h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Arrow icon styles */
+  .fa-chevron-down {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate arrow icon when collapsed */
+  .fa-chevron-down.rotate {
+    transform: rotate(180deg);
+  }
+  
+  /* Title container styles */
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .title-container:hover {
+    background-color: #f0f0f0;
+  }
+
+  .title-container i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Collapsed icon rotation */
+  .title-container.collapsed i {
+    transform: rotate(-90deg);
+  }
+  
+  /* Options container styles */
+  .options-container {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .options-container.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  /* Checkbox styles */
+  .form-check {
+    margin-bottom: 5px;
+  }
+  
+  .form-check input[type="checkbox"] {
+    display: none;
+  }
+  
+  .form-check label {
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    padding-left: 25px;
+    transition: color 0.3s ease;
+  }
+  
+  .form-check label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-check input[type="checkbox"]:checked + label:before {
+    background-color: #007bff;
+  }
+  
+  .form-check label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .form-check input[type="checkbox"]:checked + label:after {
+    transform: translateY(-50%) scale(1);
+  }
+  
+  /* Hover effect for checkboxes */
+  .form-check label:hover:before {
+    background-color: #eaeaea;
+  }
+  
+  /* Show more link animation */
+  .view-more a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .view-more a:hover {
+    color: #0056b3;
+  }
+  .options-container {
+    overflow: hidden;
+    max-height: auto; /* Set to a large value */
+    transition: max-height 0.4s ease;
+  }
+  
+  .options-container.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
+  
+  

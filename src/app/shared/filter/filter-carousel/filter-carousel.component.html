@@ -1,0 +1,30 @@
+<div class="brands">
+   
+    <div class="container ">
+     
+        <div class="row d-flex main-container">
+
+
+          
+            <div class="row">
+                <div class="brands-area shadow">
+                    <div class="col-12">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap brand-slider-item">
+                            <div class="col-lg-3" *ngFor="let item of filterCarouselItem">
+                                <app-filter-carousel-item [item]="item" ></app-filter-carousel-item>
+                              </div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+               
+            </div>
+            <div class="prev-arrow" role="button" aria-label="Next slide" aria-disabled="false"></div>
+            <div class="next-arrow" role="button" aria-label="Next slide" aria-disabled="false"></div>
+        
+        </div>
+
+    </div>
+</div>

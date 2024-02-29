@@ -9,6 +9,11 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    // Todo remove after test
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then(m => m.TestModule)
   }
 ];
 

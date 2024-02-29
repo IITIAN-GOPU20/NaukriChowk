@@ -1,0 +1,31 @@
+<div class="filter-section">
+    <div class="title-container" (click)="toggleCollapse()">
+        <h4>{{ title }}</h4>
+        <i class="fa fa-chevron-down" [class.rotate]="collapsed"></i>
+    </div>
+    <div class="options-container" [class.collapsed]="collapsed">
+        <div *ngFor="let option of options.slice(0, 3)" class="form-check">
+            <input class="form-check-input" type="checkbox" [value]="option.value" [id]="'option-' + option.id">
+            <label class="form-check-label" [for]="'option-' + option.id">
+                {{ option.label }}
+            </label>
+        </div>
+        <!-- <div class="view-more" *ngIf="options.length > 3" data-toggle="popover" title="More Options" data-content="#popoverContent">
+            <a>Show More</a>
+        </div> -->
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="kk">Click to toggle popover</button>
+    </div>
+</div>
+
+<ng-template #popoverContent>
+    <div class="popover-options">
+        <div *ngFor="let option of options || ['','','']">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" [value]="option.value" [id]="'option-' + option.id">
+                <label class="form-check-label" [for]="'option-' + option.id">
+                    {{ option.label || 'hello' }} hello
+                </label>
+            </div>
+        </div>
+    </div>
+</ng-template>
