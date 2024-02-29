@@ -1,39 +1,125 @@
-/* The sidebar menu */
-.sidenav {
-    height: 100%;
-    width: 100%;
- 
-    background-color: #111;
 
-    overflow-x: hidden;
-
-
+.card{
+  text-align: center;
+  font-family: "Bitter", serif;
+  background-color: #217093;
+  font-weight: bold;
+  font-size: 300px;
+  font-style: normal;
+  color: #f7f4f4;
+  border-radius: 100px;
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+  width: 100%;
+  
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
+.job-card {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  max-height: 100px;
+  object-fit: contain;
 }
 
 
-.sidenav a:hover {
-    color: #f1f1f1;
+.logo{
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  animation: scrollAnimation 5s linear infinite;
+}
+@keyframes scrollAnimation {
+  0% {
+      transform: translateX(10%);
+  }
+  100% {
+      transform: translateX(-100%); 
+  }
 }
 
+.stats-container {
+  overflow-x: hidden; 
+}
 
-.main {
-    margin-left: 160px;
-    padding: 0px 10px;
+.stats-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  overflow-x: auto; 
+  white-space: nowrap;
+  animation: scrollAnimation2 5s linear infinite;
+}
+
+.stat {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  color: #217093;
+  font-weight: 600;
+  font-size: large;
+  font-family: "Bitter", serif;
+}
+
+.divider {
+  height: 50px; /* Adjust the height of the vertical divider */
+  width: 2px;
+  background-color: #ccc;
+}
+
+@keyframes scrollAnimation2 {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(100% - 20px)); /* Adjust based on the number of stats and gap */
+  }
+}
+
+.content{
+  width: 600px;
+  height: 300px;
+  background-color: #217093;
+  color: #f7f4f4;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gradient-box {
+  background: linear-gradient(45deg, #3498db, #2980b9, #2ecc71, #27ae60);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s infinite;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 
 @media screen and (max-height: 992px) {
-    .sidenav {
-      display: none;
-    }
-
-   
+  .sidenav {
+    display: none;
+  }
 }
