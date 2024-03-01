@@ -2,9 +2,10 @@
   margin: 0px;
   padding: 0px;
 }
-
+.sidebar-container{
+  width: 40%
+}
 .register-container {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,9 +65,7 @@ form .inputGroup4 {
   margin: 0 0 1em;
 }
 
-/* form .inputGroup:last-of-type {
-  margin-bottom: 0;
-} */
+
 
 form label {
   /* margin: 0 0 12px; */
@@ -79,7 +78,7 @@ form label {
 }
 
 form {
-  margin-right: 10%;
+  margin-right: 5%;
   background-color: #fafffe;
   margin-top: 25px;
   margin-bottom: 0px;
@@ -96,10 +95,7 @@ form .inputGroup3 {
   margin-top: 1.2rem;
 }
 
-form .inputGroupRadio {
 
-
-}
 
 form .inputGroup1 .helper1 {
   top: 0;

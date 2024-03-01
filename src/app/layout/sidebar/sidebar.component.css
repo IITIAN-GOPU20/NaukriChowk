@@ -1,5 +1,5 @@
 
-.card{
+.card {
   text-align: center;
   font-family: "Bitter", serif;
   background-color: transparent;
@@ -11,6 +11,7 @@
   width: 100%;
 
 }
+
 .card:hover {
   transform: scale(1.05);
 }
@@ -20,45 +21,55 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.job-card-container {
+  margin: auto 80px;
+}
+
+
 .job-card:hover {
   transform: scale(1.05);
 }
 
 .card-img-top {
-  max-height: 100px;
   object-fit: contain;
+  padding: 4px 0;
 }
 
 
-.logo{
+.logo {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
- 
+
 }
+
 .pb {
   color: black;
 }
-.pb-p-container{
+
+.pb-p-container {
   color: black;
   font-size: 1.05rem;
   font-weight: 500;
 }
+
 .logo::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
+
 @keyframes scrollAnimation {
   0% {
-      transform: translateX(10%);
+    transform: translateX(10%);
   }
+
   100% {
-      transform: translateX(-100%); 
+    transform: translateX(-100%);
   }
 }
 
 
 .stats-container {
-  overflow-x: hidden; 
+  overflow-x: hidden;
   margin-top: 50px;
   position: relative;
 }
@@ -66,44 +77,40 @@
 .stats-grid {
   display: flex;
   align-items: center;
-  gap: 20px; 
-  overflow-x: auto; 
+  gap: 20px;
+  overflow-x: auto;
   white-space: nowrap;
-  animation: scrollAnimation2 5s linear infinite;
+
   margin-top: 10px;
 }
+
 .stats-grid::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .stat {
   flex: 0 0 auto;
   text-align: center;
-  padding: 20px;
+
   background-color: transparent;
   border-radius: 8px;
-  
+
   font-weight: 600;
   font-size: large;
 }
 
-.divider {
-  height: 50px; /* Adjust the height of the vertical divider */
-  width: 2px;
-  background-color: #ccc;
-}
 
 @keyframes scrollAnimation2 {
 
   100% {
-      transform: translateX(calc(100% )); /* Adjust based on the number of stats and gap */
+    transform: translateX(calc(100%));
+    /* Adjust based on the number of stats and gap */
   }
 }
 
-.content{
-  
+.content {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-top: 100px;
 }
 
@@ -113,22 +120,24 @@
   animation: gradientAnimation 15s infinite;
   height: 100%;
   width: 100%;
-  border-top-right-radius: 18px; /* Adjust the value as needed */
-  border-bottom-right-radius: 18px; 
-  z-index: 9999;
-  position: relative;
-  
+  border-top-right-radius: 20%;
+ 
+;
+
+
 }
 
 @keyframes gradientAnimation {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
+
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
