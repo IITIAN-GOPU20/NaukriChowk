@@ -1,17 +1,27 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.sidebar-container{
+  width: 40%
+}
 .register-container {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
+.no-padding-container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 .register-container h1 {
   display: block;
   color: #217093;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 form .svgContainer .mySVG {
@@ -44,7 +54,7 @@ form .svgContainer {
 }
 
 form .inputGroup {
-  margin: 0 0 2em;
+  margin: 0 0 1.25rem;
   padding: 0;
   position: relative;
 
@@ -55,9 +65,7 @@ form .inputGroup4 {
   margin: 0 0 1em;
 }
 
-form .inputGroup:last-of-type {
-  margin-bottom: 0;
-}
+
 
 form label {
   /* margin: 0 0 12px; */
@@ -71,11 +79,10 @@ form label {
 
 form {
   margin-right: 5%;
-  margin-left: 5%;
   background-color: #fafffe;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  padding: 2.25em;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  padding: 1.5rem 2.25rem;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: solid 2px #217093;
@@ -85,13 +92,10 @@ form {
 form .inputGroup3 {
   display: flex;
   justify-content: center;
+  margin-top: 1.2rem;
 }
 
-form .inputGroupRadio {
-  display: flex;
-  align-items: center;
 
-}
 
 form .inputGroup1 .helper1 {
   top: 0;
@@ -122,19 +126,18 @@ form input[type="text"],
 form input[type='password'] {
   display: block;
   margin: 0;
-  padding: 0 1em 0;
+  padding: 0 1rem 0;
   background-color: #f3fafd;
   border: solid 2px #217093;
   border-radius: 22px;
   -webkit-appearance: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 90%;
-  height: 40px;
-  font-size: 1.05em;
+  width: 100%;
+  height: 30px;
+  font-size: 1rem;
   color: #353538;
   font-weight: 600;
-
   -webkit-transition: border-color .25s ease-out, -webkit-box-shadow .2s linear;
   transition: border-color .25s ease-out, -webkit-box-shadow .2s linear;
   transition: box-shadow .2s linear, border-color .25s ease-out;
@@ -177,8 +180,8 @@ form .wrapper .formwrapper button:disabled {
 }
 
 .inputGroup span {
-  padding: 0 1em 0;
-  color: rgba(244, 53, 15, 0.767);
+  /* padding: 0 1em 0; */
+  color: rgba(207, 52, 25, 0.767);
   font-size: .91em;
   font-weight: 600;
 
@@ -286,19 +289,15 @@ form .inputGroup1 .helper {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
+  margin-top: 30px;
   border-left: 1px solid #217093;
   padding-left: 20px;
 }
 
-.sidebar-container {
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-@media only screen and (max-width: 992px) {
+
+@media only screen and (max-width: 1200px) {
   .google-login-btn {
     border: 0px;
     border-top: 1px solid #217093;

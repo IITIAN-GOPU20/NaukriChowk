@@ -1,0 +1,116 @@
+.range-slider {
+
+  }
+  
+  .range-slider .title {
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    
+  }
+  .inner-exp-title h4{
+  
+    font-size: 12px;
+  }
+  .exp-container{
+    padding: 0 !important
+  }
+  
+  .range-slider input[type="range"] {
+    outline: 0;
+    border: 0;
+    border-radius: 500px;
+    width: 400px;
+    max-width: 100%;
+    margin: 3px 0 16px;
+    transition: all 0.3s ease-in-out;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	.range-slider input[type="range"] {
+		overflow: hidden;
+		height: 15px;
+		-webkit-appearance: none;
+		background-color: #ddd;
+	}
+
+	.range-slider input[type="range"]::-webkit-slider-runnable-track {
+		height: 15px;
+		-webkit-appearance: none;
+		color: #444;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.range-slider input[type="range"]::-webkit-slider-thumb {
+		width: 15px;
+		-webkit-appearance: none;
+		height: 15px;
+		cursor: ew-resize;
+		background: #fff;
+		box-shadow: -325px 0 0 320px #1597ff, inset 0 0 0 40px #000204;
+		border-radius: 50%;
+		transition: all 0.3s ease-in-out;
+		position: relative;
+	}
+
+	.range-slider input[type="range"]:active::-webkit-slider-thumb {
+		background: #fff;
+		box-shadow: -325px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+	}
+}
+.range-slider input[type="range"]::-moz-range-progress {
+    background-color: #43e5f7;
+}
+.range-slider input[type="range"]::-moz-range-track {
+    background-color: #9a905d;
+}
+.range-slider input[type="range"]::-ms-fill-lower {
+    background-color: #43e5f7;
+}
+.range-slider input[type="range"]::-ms-fill-upper {
+    background-color: #9a905d;
+}
+#h4-container {
+    width: 400px;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  #h4-container #h4-subcontainer {
+    width: 100%;
+    position: relative;
+  }
+  
+  #h4-container #h4-subcontainer h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    color: #fff !important;
+    font-size: 10px;
+    transform-origin: center -5px;
+    transform: translateX(-50%);
+    transition: margin-top 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  }
+  
+  #h4-container #h4-subcontainer h4 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1597ff;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+  
+  input:not(:active) + #h4-container #h4-subcontainer h4 {
+    opacity: 0;
+    margin-top: -50px;
+    pointer-events: none;
+}

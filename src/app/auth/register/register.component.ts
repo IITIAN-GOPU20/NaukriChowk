@@ -15,12 +15,14 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    (window as any).initialize();
+    setTimeout(()=>{
+      (window as any).initialize();
+    }, 1)
+    
   }
 
   signUp(form: any){
     console.log(form)
-
   }
 
 }

@@ -1,39 +1,149 @@
-/* The sidebar menu */
-.sidenav {
-    height: 100%;
-    width: 100%;
+
+.card {
+  text-align: center;
+  font-family: "Bitter", serif;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 300px;
+  font-style: normal;
+  border: 0;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.job-card {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.job-card-container {
+  margin: auto 80px;
+}
+
+
+.job-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  object-fit: contain;
+  padding: 4px 0;
+}
+
+
+.logo {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+
+}
+
+.pb {
+  color: black;
+}
+
+.pb-p-container {
+  color: black;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.logo::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.stats-container {
+  overflow-x: hidden;
+  margin-top: 50px;
+  position: relative;
+}
+
+.stats-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  margin-top: 10px;
+}
+
+.stats-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.stat {
+  flex: 0 0 auto;
+  text-align: center;
+
+  background-color: transparent;
+  border-radius: 8px;
+
+  font-weight: 600;
+  font-size: large;
+}
+
+
+@keyframes scrollAnimation2 {
+
+  100% {
+    transform: translateX(calc(100%));
+    /* Adjust based on the number of stats and gap */
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.gradient-box {
+  background: linear-gradient(45deg, #3498db, #53abe6, #49e389, #83f5b2);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s infinite;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20%;
  
-    background-color: #111;
-
-    overflow-x: hidden;
+;
 
 
 }
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
 
+  50% {
+    background-position: 100% 50%;
+  }
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-
-.main {
-    margin-left: 160px;
-    padding: 0px 10px;
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
 @media screen and (max-height: 992px) {
-    .sidenav {
-      display: none;
-    }
-
-   
+  .sidenav {
+    display: none;
+  }
 }

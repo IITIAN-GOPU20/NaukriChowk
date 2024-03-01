@@ -6,7 +6,7 @@ import { FilterComponent } from './filter/filter.component';
 import { FilterCheckboxComponent } from './filter/filter-checkbox/filter-checkbox.component';
 import { FilterCarouselComponent } from './filter/filter-carousel/filter-carousel.component';
 import { FilterCarouselItemComponent } from './filter/filter-carousel/filter-carousel-item/filter-carousel-item.component';
-
+import { RangeSliderComponent } from './filter/range-slider/range-slider.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { FilterCarouselItemComponent } from './filter/filter-carousel/filter-car
     FilterCheckboxComponent,
 
     FilterCarouselComponent,
-    FilterCarouselItemComponent
+    FilterCarouselItemComponent,
+    RangeSliderComponent
   ],
   imports: [
     CommonModule,

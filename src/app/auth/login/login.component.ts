@@ -14,7 +14,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit() {
-    (window as any).initialize();
+    setTimeout(()=>{
+      (window as any).initialize();
+    }, 1)
+    
   }
 
   login(form: any){

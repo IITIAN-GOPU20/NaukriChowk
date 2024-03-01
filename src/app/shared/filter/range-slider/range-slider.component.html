@@ -1,0 +1,22 @@
+<div class="range-slider">
+    <h4 class="title">Experince</h4>
+    <div class ='exp-container'>
+        <div class="row">
+            <div class="inner-exp-title col-12 d-flex align-items-center justify-content-between">
+                <h4>0 Yrs</h4>
+                <h4>30 Yrs</h4>
+            </div>
+        </div>
+      
+    </div>
+    
+    <input type="range" (input)="onRangeChange($event)" value="0"  min="0" max="30">
+    <div id="h4-container">
+        <div id="h4-subcontainer">
+            <h4 class="h2emlement" #h4Element>{{rangePercent}}
+               <span class="spanelement"#spanElement></span>
+            </h4>
+           
+        </div>
+    </div>
+</div>
