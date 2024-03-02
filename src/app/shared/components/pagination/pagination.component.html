@@ -1,0 +1,22 @@
+<div class="main-container">
+    <nav class="pagination-outer" aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item">
+                <a *ngIf="currentPage > pagesToShow" class="page-link" (click)="onPrevPageClick()"
+                    aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                </a>
+            </li>
+            <ng-container *ngFor="let page of getPagesArray()">
+                <li class="page-item" [class.active]="currentPage === page" *ngIf="page > 0">
+                    <a class="page-link" [attr.data-hover]="page" (click)="onPageClick(page)">{{ page }}</a>
+                </li>
+            </ng-container>
+            <li class="page-item">
+                <a class="page-link" *ngIf="currentPage < totalPages" (click)="onNextPageClick()" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

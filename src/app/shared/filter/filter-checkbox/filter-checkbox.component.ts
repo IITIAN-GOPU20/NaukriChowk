@@ -20,7 +20,7 @@ export class FilterCheckboxComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
   ngAfterViewInit(): void {
-    this.initPopover();
+   
   }
 
   initPopover() {

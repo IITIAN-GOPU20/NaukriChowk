@@ -1,0 +1,190 @@
+.job-card {
+
+    background: var(--N100);
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 15px 10px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: box-shadow .2s linear;
+    border: 1px solid #eff2f5;
+    border-bottom-right-radius: 12%;
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 22px;
+    margin-bottom: 15px;
+}
+
+.fold {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    /* Adjust width of the folded part */
+    height: 30px;
+    /* Adjust height of the folded part */
+    background: linear-gradient(to top right, transparent 49%, #dbddde 50%);
+    /* Add gradient background */
+    transform: rotate(-80deg);
+    /* Rotate transformation for folding effect */
+    z-index: 2;
+    border-radius: 20% 30% 0;
+}
+
+.company-logo {
+    width: 50px;
+    /* Adjust width and height as needed */
+    height: 50px;
+    border-radius: 50%;
+    /* Make it circular */
+    overflow: hidden;
+    /* Hide any overflow content */
+    background-image: url('/assets/amazon.png');
+    /* Set the background image */
+    background-size: cover;
+    /* Cover the entire element with the background image */
+    background-position: center;
+    /* Center the background image */
+    margin-right: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.job-card:hover {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.job-header {}
+
+.job-location {
+    white-space: nowrap;
+}
+.common-color{
+    color: var(--N700);
+    font: 0.8rem sans-serif !important;
+}
+
+.job-title {
+    font-size: 1.05rem;
+    font-weight: bold;
+    line-height: 22px;
+    color: var(--N800);
+}
+
+.job-subtitle {
+    font-size: 0.8rem;
+    color: var(--N700);
+}
+
+
+
+.job-description {
+    margin-bottom: 10px;
+    padding-right: 1rem;
+
+}
+
+.job-description p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    color: rgb(70, 70, 70);
+    font-weight: 400;
+
+}
+
+.job-details {
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0 10px;
+}
+.posting-time{
+    font-size: 0.7rem;
+    color: #217093;
+    font-weight: 700;
+}
+
+.job-details .row {
+
+    flex-wrap: nowrap;
+}
+
+.job-details .row .col-3,
+.job-details .row .col-4 {
+
+    padding: 0 10px;
+}
+
+.job-label {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.job-label p {
+    background-color: var(--N400, #1470e0);
+    /* Blue color, you can change it */
+    color: rgb(255, 255, 255);
+    padding: 4px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.8;
+    top: 0;
+    right: 0;
+    font-size: larger;
+    font-weight: 500;
+
+}
+
+.main-container {
+    position: relative;
+    padding-top: 15px;
+}
+
+.job-details .row .job-location p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.job-skills p {
+    display: inline-block;
+    background-color: #d4e7ef;
+    color: #217093;
+    border-radius: 16px;
+    padding: 4px 10px;
+    margin: 0 5px 5px 0;
+    font-size: 0.7rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.job-footer {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.common-job-details {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* exp */
+
+
+.common-job-details i {
+    margin-right: 15px;
+}

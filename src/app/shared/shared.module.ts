@@ -7,16 +7,20 @@ import { FilterCheckboxComponent } from './filter/filter-checkbox/filter-checkbo
 import { FilterCarouselComponent } from './filter/filter-carousel/filter-carousel.component';
 import { FilterCarouselItemComponent } from './filter/filter-carousel/filter-carousel-item/filter-carousel-item.component';
 import { RangeSliderComponent } from './filter/range-slider/range-slider.component';
+import { JobCardsComponent } from './job-seeker/job-cards/job-cards.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+
 
 @NgModule({
   declarations: [
     ToggleSwitchComponent,
     FilterComponent,
     FilterCheckboxComponent,
-
     FilterCarouselComponent,
     FilterCarouselItemComponent,
-    RangeSliderComponent
+    RangeSliderComponent,
+    JobCardsComponent,
+    PaginationComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +33,9 @@ import { RangeSliderComponent } from './filter/range-slider/range-slider.compone
     ReactiveFormsModule,
     ToggleSwitchComponent,
     FilterComponent,
-    FilterCarouselComponent
+    FilterCarouselComponent,
+    JobCardsComponent,
+    PaginationComponent
   ]
 })
 export class SharedModule { }

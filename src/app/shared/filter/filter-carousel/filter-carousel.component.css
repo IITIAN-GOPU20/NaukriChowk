@@ -1,107 +1,86 @@
 .brands {
-    position: relative;
-  }
-  .main-container{
-    position: relative;
-  }
+  position: relative;
+}
 
-/* .prev-arrow,
+.main-container {
+  position: relative;
+  margin: 30px 100px 0px 0px;
+}
+
 .next-arrow {
-    background-color: rgba(0, 0, 0, 0.39);
-  border: 1px solid transparent;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  border-radius: 30px;
-  text-align: center;
+  background-image: url('../../../../assets/chevronRight.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 100%;
+  border: 1px solid #E7E7F1;
+  width: 36px;
+  height: 36px;
+  background-size: 6px 12px;
+  background-color: #ffffff;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0.5%;
+  margin: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.prev-arrow {
+  background-image: url('../../../../assets/chevronLeft-orange.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 100%;
+  border: 1px solid #E7E7F1;
+  width: 36px;
+  height: 36px;
+  background-size: 6px 12px;
+  background-color: #ffffff;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -1.2%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.brands-area {
+  padding: 15px 0px;
+
+  border-radius: 28px;
+  background-color: var(--N400, #E7E7F1);
+}
+
+.brands-area .brand-slider-item .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 10px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-position: absolute;
-  z-index: 99;
-} */
+  -ms-flex-align: center;
+  align-items: center;
+}
 
-.next-arrow{
-    background-image: url('../../../../assets/chevronRight.svg');
-    background-repeat: no-repeat;
-    background-position: center center; 
-    border-radius: 100%;
-    border: 1px solid #E7E7F1;
-    width: 36px;
-    height: 36px;
-    background-size: 6px 12px;
-    background-color: #ffffff;
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0.5%;
-    margin: auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-  
+.brands-area .brand-slider-item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0px 10px;
 }
-.prev-arrow{
-    background-image: url('../../../../assets/chevronLeft-orange.svg');
-    background-repeat: no-repeat;
-    background-position: center center; 
-    border-radius: 100%;
-    border: 1px solid #E7E7F1;
-    width: 36px;
-    height: 36px;
-    background-size: 6px 12px;
-    background-color: #ffffff;
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-   left: -1.2%;
-   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
-  
+
+.brands-area .brand-slider-item div img {
+  width: 150px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor: pointer;
 }
-  
-  .brands-area {
-    padding: 30px 0px;
-    border-radius: 28px;
-    background-color: var(--N400, #E7E7F1);
-  }
-  
-  .brands-area .brand-slider-item .slick-track {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .brands-area .brand-slider-item div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0px 15px;
-  }
-  
-  .brands-area .brand-slider-item div img {
-    width: 120px;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    cursor: pointer;
-  }
-  
-  .brands-area .brand-slider-item div img:hover {
-    -webkit-filter: grayscale(0);
-            filter: grayscale(0);
-  }
+
+.brands-area .brand-slider-item div img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}

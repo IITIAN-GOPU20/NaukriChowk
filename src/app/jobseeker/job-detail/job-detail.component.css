@@ -1,0 +1,331 @@
+* {
+    font-family: var(--font-family, "sans-serif");
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.custom-shadow {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    /* Adjust shadow values */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    /* Adjust shadow values */
+}
+
+
+.bgcontainer {}
+
+.job-card {
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0;
+}
+
+.company-logo {
+    width: 50px;
+    /* Adjust width and height as needed */
+    height: 50px;
+    border-radius: 50%;
+    /* Make it circular */
+    overflow: hidden;
+    /* Hide any overflow content */
+    background-image: url('/assets/amazon.png');
+    /* Set the background image */
+    background-size: cover;
+    /* Cover the entire element with the background image */
+    background-position: center;
+    /* Center the background image */
+    margin-right: 15px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.header-inner-container {
+    display: flex;
+    align-items: center;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-subtitle-container {
+    display: flex;
+    align-items: center;
+}
+
+.jf-socialiconssimple li {
+    float: left;
+    padding: 0 10px;
+    line-height: inherit;
+    list-style-type: none;
+}
+
+.jf-socialiconssimple li.jf-facebook a i {
+    color: #3b5999;
+}
+
+.jf-socialiconssimple li a {
+    font-size: 0.9rem;
+}
+
+.jf-socialiconssimple {
+    width: auto;
+    clear: both;
+    float: right;
+}
+
+
+.company-title {
+    font-size: 1.2rem;
+}
+
+.company-rating {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 1px;
+    height: 14px;
+    background-color: grey;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.exp-container {}
+
+.details {}
+
+.job-details-container {
+    display: flex;
+    align-items: center;
+}
+
+.company-subtitle {
+    margin-right: 10px;
+}
+
+
+
+.job-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.experience,
+.salary,
+.location {}
+
+.additional-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.additional-info p {
+    margin: 0;
+
+}
+
+.common-icon-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.margin-right5 {
+    margin-right: 10px;
+}
+
+.jf-jobbenefits {
+    border: 2px solid red;
+}
+
+.location-container {
+    margin: 5px 0;
+}
+
+.additional-info .separator {
+    margin: 0 10px;
+
+    border-right: 1px solid #ccc;
+    height: 18px;
+    /* Adjust height as needed */
+}
+
+.send-job-button {
+    background-color: #217093;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer !important;
+    animation-name: wave-animation !important;
+    animation-duration: 2.5s !important;
+    animation-iteration-count: infinite !important;
+    transform-origin: 70% 70% !important;
+    text-decoration: none;
+}
+
+.send-job-button:hover {
+    animation-name: unset !important;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-top: 2px solid rgb(198, 194, 194);
+    /* Fixed typo: "soild" to "solid" */
+    margin-top: 25px
+}
+
+
+/* job desc */
+
+.job-description {
+    background-color: var(--N100);
+    margin-top: 16px;
+    box-shadow: 0 6px 12px var(--box-shadow1);
+    border-radius: 20px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.description-content {
+    margin-bottom: 20px;
+}
+
+.other-details,
+.education {
+    margin-bottom: 20px;
+}
+
+.details {
+    margin-bottom: 10px;
+}
+
+.details label {
+    font-weight: bold;
+}
+
+.comma {
+    margin-right: 5px;
+}
+
+.heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.skills-container {
+    margin-top: 16px;
+}
+
+.skill-tag {
+    display: inline-block;
+    color: #767676;
+    margin: 1px 5px;
+    font-size: 12px;
+    line-height: 28px;
+    position: relative;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    padding: 0 19px 0 37px;
+    /* Replace with your desired text color */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    animation: tagPulse 1s infinite ease-in-out;
+}
+
+.skill-tag:hover {
+    background-color: #f4efef;
+    animation: unset !important
+}
+
+
+
+
+
+
+
+.skill-tag:before {
+    position: absolute;
+    content: '\f058';
+    font-size: 12px;
+    left: 20px;
+    top: 0;
+    font-family: 'FontAwesome';
+    color: #217093;
+    z-index: 2;
+}
+
+@keyframes tagPulse {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}

@@ -20,7 +20,7 @@
     outline: 0;
     border: 0;
     border-radius: 500px;
-    width: 400px;
+    width: 100%;
     max-width: 100%;
     margin: 3px 0 16px;
     transition: all 0.3s ease-in-out;
@@ -70,7 +70,7 @@
     background-color: #9a905d;
 }
 #h4-container {
-    width: 400px;
+    width: 100%;
     max-width: 100%;
     padding: 0 10px;
     box-sizing: border-box;

@@ -1,46 +1,38 @@
 .filter-carousel-item {
-    background: white;
-    padding: 9px 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    height: 100px;
-    text-decoration: none;
-    color: black;
-    width: 180px;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-    cursor: pointer;
-    position: relative;
-  }
-  .filter-carousel-item:hover {
-    box-shadow: 0px 14px 40px rgba(30,10,58,0.1);
-   
-  
-  }
-  .item-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .item-subtitle {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-  }
-  
-  .item-link {
-    
-    color: #191960;
-   
+  background: white;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 18px;
+  height: 60px;
+  text-decoration: none;
+  color: black;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.filter-carousel-item:hover {
+  -webkit-box-shadow: 0 10px 0px rgba(0, 0, 0, 0.048);
+  box-shadow: 0 6px 12px rgba(17, 16, 16, 0.055);
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+}
+
+.item-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+
+.item-link {
+  color: #174151;
   text-align: center;
-    
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .item-link:hover {
-    background-color: #0056b3;
-  }
-  
+  font-size: 0.7rem;
+  text-decoration: none;
+  background-color: transparent;
+}

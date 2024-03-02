@@ -1,0 +1,100 @@
+.main-container {
+    margin-top: 70px;
+}
+
+.pagination-outer {
+    text-align: center;
+}
+
+.pagination {
+    font-family: 'Sniglet', cursive;
+    display: inline-flex;
+    position: relative;
+
+}
+
+.pagination li a.page-link {
+    color: #fff;
+    background-color: #3c8db1;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 27px;
+    height: 40px;
+    width: 40px;
+    margin: 0 12px 0 0;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.pagination li.active a.page-link,
+.pagination li a.page-link:hover,
+.pagination li.active a.page-link:hover {
+    color: transparent;
+    background: #3c8db1;
+    border: none;
+    box-shadow: 0 0 0 10px #fff inset;
+    cursor: pointer;
+}
+
+.pagination li a.page-link:before {
+    content: attr(data-hover);
+    color: #fff;
+    background-color: #3c8db1;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 30px;
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 60% 80%, 50% 100%, 40% 80%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 60% 80%, 50% 100%, 40% 80%, 0 80%);
+}
+
+.pagination li a.page-link:hover:before,
+.pagination li.active a.page-link:before {
+    opacity: 1;
+    top: -50%;
+    transition: all 0.3s linear 0s;
+}
+
+.pagination li:first-child a.page-link {
+    color: #fff;
+    background: #3c8db1;
+    border-radius: 20px 0 0 20px;
+}
+
+.pagination li:last-child a.page-link {
+    color: #fff;
+    background: #3c8db1;
+    border-radius: 0 20px 20px 0;
+    margin-right: 0;
+}
+
+.pagination li:first-child a.page-link:before,
+.pagination li:last-child a.page-link:before {
+    display: none;
+}
+
+.pagination li:first-child a.page-link:hover,
+.pagination li:last-child a.page-link:hover {
+    color: #fff;
+    box-shadow: 0 0 0 5px #fff inset;
+}
+
+@media only screen and (max-width: 480px) {
+    .pagination {
+        display: block;
+    }
+
+    .pagination li {
+        margin: 25px 0;
+        display: inline-block;
+    }
+}

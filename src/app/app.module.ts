@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JobseekerModule } from './jobseeker/jobseeker.module';
 
 
 
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LayoutModule,
     SharedModule,
     HomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    JobseekerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

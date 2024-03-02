@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <app-filter-carousel></app-filter-carousel>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-3 absolute">
+                <app-filter></app-filter>
+            </div>
+
+            <div class="col-lg-8  jobs-container">
+                <app-job-cards></app-job-cards>
+                <app-job-cards></app-job-cards>
+                <app-job-cards></app-job-cards>
+                <app-job-cards></app-job-cards>
+                <app-job-cards></app-job-cards>
+            </div>
+
+            <div class="row mx-0">
+                <div class="col-lg-7"></div>
+                <div class="col-lg-5">
+                    <app-pagination [currentPage]="currentPage" [totalPages]="totalPages"
+                        (pageChange)="onPageChange($event)"></app-pagination>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
