@@ -1,13 +1,14 @@
 <main>
     <!--  BANNER AREA -->
- <app-banner></app-banner>
+    <app-banner></app-banner>
     <!--  BRANDS AREA -->
     <div class="brands">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="brands-area shadow">
-                        <div class="d-flex align-items-center justify-content-around flex-wrap brand-slider-item">
+                        <div #brandSlider
+                            class="d-flex align-items-center justify-content-around flex-wrap brand-slider-item">
                             <div>
                                 <img src="../../../assets/homeassests/brand/googlelogo.png" alt="Brand"
                                     class="img-fluid" />
@@ -348,8 +349,8 @@
                 </div>
             </div>
         </div> -->
-        <!-- Clients Comments  -->
-        <!-- <div class="call-action-two__comments-group">
+    <!-- Clients Comments  -->
+    <!-- <div class="call-action-two__comments-group">
             <div class="call-action-two_group call-action_group-1" data-aos="fade-down" data-aos-easing="linear">
                 <img src="assets/img/avatar/avator-1.png" alt="avatar" />
                 <span class="comments"> I can take care of your pitch </span>
@@ -402,7 +403,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="testimonial-slider">
+                <div #testimonialSlider class="testimonial-slider">
                     <div class="testimonial-item">
                         <ul class="rating mb-15 d-flex">
                             <li><i class="fas fa-star"></i></li>
@@ -525,7 +526,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 order-lg-0 order-4">
-                    <div class="footer-area-about mb-50" >
+                    <div class="footer-area-about mb-50">
                         <a href="home-2.html">
                             <img src="assets/img/logo/logo04.png" alt="Logo" class="img-fluid" />
                         </a>
@@ -541,7 +542,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 mr-lg-65 col-md-4 col-6 order-lg-0 order-md-1">
-                    <div class="footer-area-lists mb-30" >
+                    <div class="footer-area-lists mb-30">
                         <h4>Company</h4>
                         <ul>
                             <li>
@@ -582,7 +583,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 order-lg-0 order-md-3">
-                    <div class="footer-area-lists" >
+                    <div class="footer-area-lists">
                         <h4>Legal</h4>
                         <ul>
                             <li>
@@ -628,11 +629,12 @@
 
 <div class="templatecookie-btn">
     <a class="purchase-btn">
-    Purchase Now
-    <span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-    </svg>
-    </span>
+        Purchase Now
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+        </span>
     </a>
 </div>

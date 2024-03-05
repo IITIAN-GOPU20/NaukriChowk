@@ -19,14 +19,16 @@
     </div> <label for="show_search" class="search_icon"><i class="fas fa-search"></i></label>
 
     <!-- profile dowpdown -->
-    <!-- <app-profile-dropdown [isAuthenticated]="true"></app-profile-dropdown> -->
+    <app-profile-dropdown *ngIf="isAuthenticated; else signin"></app-profile-dropdown>
 
-    <div class="login_btn">
-        <a class="cta" [routerLink]="['/login']"><button class="btn_sign btn_2">Login</button></a>
-    </div>
-    <div class="login_btn">
-        <a class="cta" [routerLink]="['/register']"><button class="btn_sign">Register</button></a>
-    </div>
+    <ng-template #signin>
+        <div class="login_btn">
+            <a class="cta" [routerLink]="['/login']"><button class="btn_sign btn_2">Login</button></a>
+        </div>
+        <div class="login_btn">
+            <a class="cta" [routerLink]="['/register']"><button class="btn_sign">Register</button></a>
+        </div>
+    </ng-template>
 
 
 </header>

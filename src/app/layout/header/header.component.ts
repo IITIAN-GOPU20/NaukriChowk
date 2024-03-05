@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { TokenStorageService } from 'src/app/shared/services/token-storage.service';
 
 @Component({
   selector: 'app-header',
@@ -7,32 +8,18 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
   }
-  
 
 
-  isToggle: boolean = false;
 
-  toggle_bar() {
-    // this.isToggle = !this.isToggle;
+
+  get isAuthenticated() {
+    return this.tokenStorage.isAthenticated()
   }
 
-  navbg:any;
-  @HostListener('document:scroll') scrollover(){
 
-
-    if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
-    {
-      this.navbg = {
-        'background-color':'#000000'
-      }
-    }else
-    {
-        this.navbg = {}
-    }
-  }
 
 }

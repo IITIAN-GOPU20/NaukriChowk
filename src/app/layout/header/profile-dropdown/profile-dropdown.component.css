@@ -1,5 +1,5 @@
 .fa-regular {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 
@@ -71,7 +71,7 @@
   max-width: 30px;
   margin-right: 20px;
   transition: 0.5s;
-   color: white
+  color: white
 }
 
 .action .menu ul li:hover img {
@@ -85,6 +85,10 @@
   font-weight: 500;
   transition: 0.5s;
   font-size: 18px;
+}
+
+.action .menu ul li:hover {
+  cursor: pointer;
 }
 
 .action .menu ul li:hover a {
