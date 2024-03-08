@@ -1,6 +1,8 @@
+declare var google :any;
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import '../svg-animation.js';
 import { FormGroupDirective } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 import { Register } from 'src/app/shared/models/register.interface.js';
 import { UserRole } from 'src/app/shared/models/enum';
@@ -12,10 +14,33 @@ import { UserRole } from 'src/app/shared/models/enum';
 })
 export class RegisterComponent implements OnInit, AfterViewInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,private router: Router) { }
   role: UserRole  = UserRole.SEEKER
   ngOnInit(): void {
+    google.accounts.id.initialize({
+      client_id: '785038016750-dfqnsdf42ho3icq8u4akh7vh0k6jur0o.apps.googleusercontent.com',
+      callback: (resp:any)=>this.handleLogin(resp)
+    });
+    google.accounts.id.renderButton(document.getElementById('google-btn'),{
+      // text: "signup_with",
+      type: "standard",
+      shape: "circle"
+      
+    })
+    google.accounts.id.prompt();
   }
+  private decodeToken(token:string){
+    return JSON.parse(atob(token.split(".")[1]));
+  }
+  handleLogin(response:any){
+    if(response){
+      const payload=this.decodeToken(response.credential);
+      sessionStorage.setItem("loggedInUser",JSON.stringify(payload));
+     
+      this.router.navigate(['/']);
+    }
+  }
+
 
   ngAfterViewInit() {
     setTimeout(() => {
