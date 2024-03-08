@@ -10,6 +10,8 @@ import { RangeSliderComponent } from './filter/range-slider/range-slider.compone
 import { JobCardsComponent } from './job-seeker/job-cards/job-cards.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 
+import { TokenStorageService } from './services/token-storage.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     CommonModule,
@@ -35,7 +38,8 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     FilterComponent,
     FilterCarouselComponent,
     JobCardsComponent,
-    PaginationComponent
+    PaginationComponent,
+    HttpClientModule
   ]
 })
 export class SharedModule { }

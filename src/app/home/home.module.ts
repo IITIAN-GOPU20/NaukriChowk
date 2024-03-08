@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { BrandsComponent } from './brands/brands.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { BannerComponent } from './banner/banner.component';
+import { MainComponent } from './main/main.component';
 
 
 
 @NgModule({
   declarations: [
     BrandsComponent,
-    BannerComponent
+    BannerComponent,
+    MainComponent
   ],
   imports: [
     CommonModule,

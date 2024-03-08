@@ -8,7 +8,7 @@
             <div class="container-fluid register-container">
                 <h1>Welcome To Naukri Chowk</h1>
                 <section class="col-12">
-                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
 
                         <!-- svgContainer -->
                         <div class="svgContainer">
@@ -192,8 +192,7 @@
 
                         <!-- login button -->
                         <div class="inputGroup inputGroup3" id="btnEvent">
-                            <button id="login" type="submit" [disabled]="loginForm.invalid"
-                                [routerLink]="['/register']">Log
+                            <button id="login" type="submit" [disabled]="loginForm.invalid">Log
                                 in</button>
                         </div>
 

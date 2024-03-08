@@ -19,14 +19,16 @@
     </div> <label for="show_search" class="search_icon"><i class="fas fa-search"></i></label>
 
     <!-- profile dowpdown -->
-    <!-- <app-profile-dropdown [isAuthenticated]="true"></app-profile-dropdown> -->
+    <app-profile-dropdown *ngIf="isAuthenticated; else signin"></app-profile-dropdown>
 
-    <div class="login_btn">
-        <a class="cta" [routerLink]="['/login']"><button class="btn_sign btn_2">Login</button></a>
-    </div>
-    <div class="login_btn">
-        <a class="cta" [routerLink]="['/register']"><button class="btn_sign">Register</button></a>
-    </div>
+    <ng-template #signin>
+        <div class="login_btn">
+            <a class="cta" [routerLink]="['/login']"><button class="btn_sign btn_2">Login</button></a>
+        </div>
+        <div class="login_btn">
+            <a class="cta" [routerLink]="['/register']"><button class="btn_sign">Register</button></a>
+        </div>
+    </ng-template>
 
 
 </header>
@@ -45,40 +47,106 @@
         <div class="main_navbar">
 
             <ul class="main_navbar_ul">
-
-                <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">HOME</a></li>
-                <li class="navbar_level_1_li"><a href="" class="navbar_level_1_link">About</a></li>
                 <li class="navbar_level_1_li ">
-                    <a href="" class="navbar_level_1_link">Full Time Jobs</a>
+                    <a href="" class="navbar_level_1_link">Jobs</a>
 
-                    <ul class="dropdown_level_1">
+                    <div class="mega_dropdown_container">
+                        <div class="row row1">
+                            <h2 class="mega_header">Popular jobs</h2>
 
-                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
-                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
-                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
-                        <li class="navbar_level_2_li"><a href="#" class="navbar_level_2_link">STOCKS AND PROFTI</a></li>
+                            <ul class="mega_ul" id="first_ul">
+                                <li class="mega_li" *ngFor="let item of popularJobs">
+                                    <a class="mega_links">{{ item.name }}</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="row row2">
+                            <h2 class="mega_header">Jobs in demand</h2>
+                            <ul class="mega_ul li_border">
+                                <ul class="mega_ul" id="first_ul">
+                                    <li class="mega_li" *ngFor="let item of demandingJobs">
+                                        <a class="mega_links">{{ item.name }}</a>
+                                    </li>
+                                </ul>
+                            </ul>
+
+                        </div>
+
+                        <div class="row row3">
+                            <h2 class="mega_header">Jobs by location</h2>
+                            <ul class="mega_ul li_border">
+                                <li class="mega_li" *ngFor="let item of jobsByLocation">
+                                    <a class="mega_links">jobs in {{ item.name }}</a>
+                                </li>
+                              
+                            </ul>
+
+                        </div>
 
 
 
-                    </ul>
+
+
+
+                    </div>
+
 
 
                 </li>
                 <li class="navbar_level_1_li">
-                    <a href="" class="navbar_level_1_link">Internship</a>
-
+                    <a href="" class="navbar_level_1_link">Companies</a>
 
                     <div class="mega_dropdown_container">
+                        <div class="row row1">
+                            <h2 class="mega_header">Explore categories</h2>
+                            <ul class="mega_ul" id="first_ul">
+                                <li class="mega_li" *ngFor="let item of companyCategories">
+                                    <a class="mega_links">{{ item.name }}</a>
+                                </li>
+                            </ul>
 
+                        </div>
+
+                        <div class="row row2">
+                            <h2 class="mega_header">Explore collections</h2>
+                            <ul class="mega_ul li_border">
+
+                                <li class="mega_li" *ngFor="let item of companyCollections">
+                                    <a class="mega_links">{{ item.name }}</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="row row2">
+                            <h2 class="mega_header">Explore industries</h2>
+                            <ul class="mega_ul li_border">
+
+                                <li class="mega_li" *ngFor="let item of companyIndustry">
+                                    <a class="mega_links">{{ item.name | titlecase }}</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </li>
+                <li class="navbar_level_1_li">
+                    <a href="" class="navbar_level_1_link">Services</a>
+
+                    <div class="mega_dropdown_container">
                         <div class="row row1">
                             <h2 class="mega_header">Development</h2>
                             <ul class="mega_ul" id="first_ul">
-
-                                <li class="mega_li"><a href="#" class="mega_links">Web Development</a></li>
-                                <li class="mega_li"><a href="#" class="mega_links">Machine Learning</a></li>
-                                <li class="mega_li"><a href="#" class="mega_links">Artificial Intelligence</a></li>
-                                <li class="mega_li"><a href="#" class="mega_links">Cloud Computing</a></li>
-                                <li class="mega_li"><a href="#" class="mega_links">Devops Insecure</a></li>
+                                <li class="mega_li" *ngFor="let item of popularJobs">
+                                    <a class="mega_links">{{ item.name }}</a>
+                                </li>
                             </ul>
 
                         </div>
